@@ -15,14 +15,16 @@
         }
 
         /* Navigation */
-        #nav {
-            background: rgba(0, 0, 0, 0.7);
+        #nav, #nav.alt {
+            background: rgba(0, 0, 0, 0.7) !important;
             padding: 0.75rem 2rem;
             position: fixed;
             top: 0;
-            width: 100%;
+            left: 0;
+            width: 100vw;
             z-index: 999;
             backdrop-filter: blur(6px);
+            box-sizing: border-box;
         }
         #nav ul {
             display: flex;
@@ -35,9 +37,16 @@
             font-weight: 600;
             text-decoration: none;
             letter-spacing: 0.5px;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            transition: background-color 0.2s ease, color 0.2s ease;
         }
         #nav a:hover {
-            color: #66ccff;
+            color: #fff;
+        }
+        #nav a:active, #nav a.active {
+            background-color: #fff;
+            color: #000;
         }
 
         /* Publication cards */
@@ -56,6 +65,9 @@
         }
 
         /* Headshot */
+        .author-photo {
+            margin-left: 3rem;
+        }
         .author-photo img {
             border-radius: 12px;
             width: 240px;
